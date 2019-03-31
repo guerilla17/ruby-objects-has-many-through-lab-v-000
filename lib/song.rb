@@ -6,7 +6,7 @@ class Song
 
   @@all = []
 
-2) A song should be initialized with a name, an artist, and a genre, and be saved in the @@all array.
+#2) A song should be initialized with a name, an artist, and a genre, and be saved in the @@all array.
 
   def initialize(name, artist, genre)
     @name = name
@@ -15,8 +15,7 @@ class Song
     @@all << self
   end
 
-// 3)The Song class needs a class method .all that lists each song in the class 
-// variable.
+#)The Song class needs a class method .all that lists each song in the class variable.
 
 def self.all
   @@all 
