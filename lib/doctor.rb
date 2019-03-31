@@ -3,7 +3,7 @@
 # The Doctor class needs a class variable @@all that begins as an empty array.
 
 class Doctor  
-  attr_accessor :name  
+  attr_accessor :name, :patient, :appointment
   @@all = []
 
 # A doctor should be initialized with a name and be saved in the @@all array.
