@@ -22,7 +22,7 @@ end
 # The Doctor class needs an instance method, #new_appointment, that takes in a an instance of the Patient class and a date, and creates a new Appointment. That Appointment should know that it belongs to the doctor
 
 def new_appointment(patient, date)
-  Appointment.new 
+  Appointment.new(patient, date)
   
 # The Doctor class needs an instance method, #appointments, that iterates through all Appointments and finds those belonging to this doctor.
 
