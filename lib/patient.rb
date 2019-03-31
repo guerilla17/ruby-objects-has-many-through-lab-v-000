@@ -29,9 +29,16 @@ end
 # The Patient class needs an instance method, #appointments, that iterates through the Appointments array and returns Appointments that belong to the patient.
 
 def appointments
-  
+  Appointment.map(&:patient)
+end
+
 
 # # The Patient class needs an instance method, #doctors, that iterates over that patient's Appointments and collects the doctor that belongs to each Appointment.
+
+def doctors
+  Appointment.map(&:appointment)
+end
+
 
 
 
