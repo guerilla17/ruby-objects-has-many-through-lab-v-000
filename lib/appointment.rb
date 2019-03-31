@@ -2,7 +2,6 @@
 
 # The Appointment class needs a class variable @@all that begins as an empty array.
 
-
 class Appointment
   attr_accessor :date, :doctor, :patient
 
