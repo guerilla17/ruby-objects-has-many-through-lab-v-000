@@ -6,12 +6,35 @@ class Doctor
   attr_accessor :name  
   @@all = []
 
+# A doctor should be initialized with a name and be saved in the @@all array.
+def initialize (name)
+  @name = name
+  @@all << self 
+  
+end
+
 # The Doctor class needs a class method .all that lists each doctor in the class variable.
 
+def self.all
+  @@all
+end
 
-# A doctor should be initialized with a name and be saved in the @@all array.
 # The Doctor class needs an instance method, #new_appointment, that takes in a an instance of the Patient class and a date, and creates a new Appointment. That Appointment should know that it belongs to the doctor
+
+def new_appointment(Patient, date)
+  
 # The Doctor class needs an instance method, #appointments, that iterates through all Appointments and finds those belonging to this doctor.
+
+def appointments
+  Appointment.all.select {|appointment| Appointment.doctor }
+end 
+
+end 
+
+
+  
+  
+
 # The Doctor class needs an instance method, #patients, that iterates over that doctor's Appointments and collects the patient that belongs to each Appointments.
   
   
