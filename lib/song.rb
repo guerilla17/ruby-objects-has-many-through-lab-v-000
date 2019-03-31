@@ -3,14 +3,6 @@
 // 2) A song should be initialized with a name, an artist, and a genre, and be saved
 // in the @@all array.
 
-class Song
-  attr_accessor :title, :artist
-  
-  def initialize(title)
-    @title = title
-    @@all = []
-  end  
-
 // 3)The Song class needs a class method .all that lists each song in the class 
 // variable.
 
@@ -18,5 +10,26 @@ def all
   @@all << self  
 end
 
+end
+
+class Song
+  attr_accessor :name, :artist, :genre
+
+  @@all = []
+
+  def initialize(name, artist, genre)
+    @name = name
+    @artist = artist
+    @genre = genre
+    @@all << self
+  end
+
+  def self.all
+    @@all
+  end
+
+  def say_hi
+    puts 'hi'
+  end
 end
 
