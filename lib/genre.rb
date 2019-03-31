@@ -1,24 +1,26 @@
 //The Genre model:
 
 //The Genre class needs a class variable @@all that begins as an empty array.
-//A genre should be initialized with a name and be saved in the @@all array.
 
 class Genre
-  attr_accessor :
+  attr_accessor :name
+
+  @@all = []
   
-  def initialize()
-    
-    @@all << self  
-    
+//A genre should be initialized with a name and be saved in the @@all array.
+
+  def initialize(name)
+    @name = name
+    @@all << self
   end
   
-//The Genre class needs a class method .all that lists each genre in the class //variable.
+//The Genre class needs a class method .all that lists each genre in the class variable.
 
 def self.all
   @@all
 end
 
-//The Genre class needs an instance method, #songs, that iterates through all songs and finds the songs that belong to that genre.
+//The Genre class needs an instance methI
 
 def songs
   song.all {|song| song.genre==self}
@@ -30,19 +32,7 @@ def artists
   genre.all.collect {|song| song.genre
 
 
-class Genre
-  attr_accessor :name
 
-  @@all = []
-
-  def initialize(name)
-    @name = name
-    @@all << self
-  end
-
-  def self.all
-    @@all
-  end
 
   def songs
     Song.all { |song| song.genre == self }
