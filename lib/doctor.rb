@@ -30,10 +30,6 @@ def appointments
 end 
 
 # The Doctor class needs an instance method, #patients, that iterates over that doctor's Appointments and collects the patient that belongs to each Appointments.
-  
-  def new_appointment(patient, date)
-    Appointment.new(patient, self, date)
-  end
 
 
   def patients
