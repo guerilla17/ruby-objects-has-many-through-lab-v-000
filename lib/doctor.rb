@@ -32,7 +32,7 @@ def appointments
 end 
 
 # The Doctor class needs an instance method, #patients, that iterates over that doctor's Appointments and collects the patient that belongs to each Appointments.
-
+# (note to self:  below code is using &: which is shorthand for:  appointments.map{|appointment| appointment.patient} )
 
   def patients
     appointments.map(&:patient)
