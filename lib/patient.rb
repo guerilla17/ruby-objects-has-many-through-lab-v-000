@@ -29,7 +29,7 @@ end
 # The Patient class needs an instance method, #appointments, that iterates through the Appointments array and returns Appointments that belong to the patient.
 
 def appointments
-  appointments.all.select {|appointment| appointment.patient == self}
+  Appointment.all.select {|appointment| appointment.patient == self}
 end
 
 
