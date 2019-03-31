@@ -36,30 +36,13 @@ end
 # # The Patient class needs an instance method, #doctors, that iterates over that patient's Appointments and collects the doctor that belongs to each Appointment.
 
 def doctors
-  appointments.map(&:appointment)
+  appointments.map(&:doctor)
 end
 
 
-
-
-  def initialize(name)
-    @name = name
-    @@all << self
-  end
-
-  def self.all
-    @@all
-  end
-
-  def new_appointment(doctor, date)
-    Appointment.new(self, doctor, date)
-  end
+Clues below:
 
   def appointments
     Appointment.all.select { |appointment| appointment.patient == self }
   end
 
-  def doctors
-    appointments.map(&:doctor)
-  end
-end
