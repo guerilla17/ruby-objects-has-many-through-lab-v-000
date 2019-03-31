@@ -26,7 +26,7 @@ def new_appointment(Patient, date)
 # The Doctor class needs an instance method, #appointments, that iterates through all Appointments and finds those belonging to this doctor.
 
 def appointments
-  Appointment.all.select {|appointment| Appointment.doctor }
+  Appointment.all.select {|appointment| appointment.doctor ==self}
 end 
 
 end 
@@ -38,4 +38,16 @@ end
 # The Doctor class needs an instance method, #patients, that iterates over that doctor's Appointments and collects the patient that belongs to each Appointments.
   
   
+  def new_appointment(patient, date)
+    Appointment.new(patient, self, date)
+  end
+
+  def appointments
+    Appointment.all.select { |appointment| appointment.doctor == self }
+  end
+
+  def patients
+    appointments.map(&:patient)
+  end
+end
   
