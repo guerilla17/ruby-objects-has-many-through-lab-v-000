@@ -14,7 +14,7 @@ class Song
 // 3)The Song class needs a class method .all that lists each song in the class 
 // variable.
 
-def all(song)
+def all
   @@all << self  
 end
 
