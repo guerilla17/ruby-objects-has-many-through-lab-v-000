@@ -24,14 +24,3 @@ def self.all
 end
 end 
 
-
-
-_____________
-
-
-
-
-  def self.all
-    @@all
-  end
-end
