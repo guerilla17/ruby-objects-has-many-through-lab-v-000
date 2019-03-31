@@ -1,4 +1,4 @@
-The Patient model:
+# The Patient model:
 
 # The Patient class needs a class variable @@all that begins as an empty array.
 # The Patient class needs a class method .all that lists each patient in the class variable.
