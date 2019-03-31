@@ -14,7 +14,7 @@ class Song
 
 def all(song)
   @@all << self  
+end
 
-
-
+end
 
