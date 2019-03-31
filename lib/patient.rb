@@ -23,7 +23,7 @@ end
 # The Patient class needs an instance method, #new_appointment, that takes in an argument of a doctor and a date and creates a new Appointment. The Appointment should know that it belongs to the patient.
 
 def new_appointment(doctor, date)
-  Appointment.new(doctor, date, self)
+  Appointment.new(self, doctor, date)
 end
 
 # The Patient class needs an instance method, #appointments, that iterates through the Appointments array and returns Appointments that belong to the patient.
